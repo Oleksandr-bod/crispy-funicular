@@ -1,5 +1,5 @@
-
 const WORDS_A1 = [
+  //1
   { en: "apple", uk: "яблуко" },
   { en: "dog", uk: "собака" },
   { en: "cat", uk: "кіт" },
@@ -10,6 +10,8 @@ const WORDS_A1 = [
   { en: "moon", uk: "місяць" },
   { en: "tree", uk: "дерево" },
   { en: "flower", uk: "квітка" },
+
+//2
   { en: "man", uk: "чоловік" },
   { en: "woman", uk: "жінка" },
   { en: "child", uk: "дитина" },
@@ -20,6 +22,8 @@ const WORDS_A1 = [
   { en: "bus", uk: "автобус" },
   { en: "train", uk: "потяг" },
   { en: "road", uk: "дорога" },
+
+//3
   { en: "street", uk: "вулиця" },
   { en: "food", uk: "їжа" },
   { en: "milk", uk: "молоко" },
@@ -30,6 +34,8 @@ const WORDS_A1 = [
   { en: "vegetable", uk: "овоч" },
   { en: "table", uk: "стіл" },
   { en: "chair", uk: "стілець" },
+  
+  //4
   { en: "window", uk: "вікно" },
   { en: "door", uk: "двері" },
   { en: "room", uk: "кімната" },
@@ -39,7 +45,9 @@ const WORDS_A1 = [
   { en: "market", uk: "ринок" },
   { en: "work", uk: "робота" },
   { en: "job", uk: "праця" },
-  { en: "friend", uk: "друг" },
+  { en: "friend", uk: "друг" },  
+
+  //5
   { en: "family", uk: "сім'я" },
   { en: "mother", uk: "мати" },
   { en: "father", uk: "батько" },
@@ -50,6 +58,8 @@ const WORDS_A1 = [
   { en: "morning", uk: "ранок" },
   { en: "evening", uk: "вечір" },
   { en: "today", uk: "сьогодні" },
+
+  //6
   { en: "tomorrow", uk: "завтра" },
   { en: "yesterday", uk: "вчора" },
   { en: "time", uk: "час" },
@@ -60,6 +70,8 @@ const WORDS_A1 = [
   { en: "spring", uk: "весна" },
   { en: "summer", uk: "літо" },
   { en: "autumn", uk: "осінь" },
+
+  //7
   { en: "red", uk: "червоний" },
   { en: "blue", uk: "синій" },
   { en: "green", uk: "зелений" },
@@ -70,6 +82,8 @@ const WORDS_A1 = [
   { en: "small", uk: "маленький" },
   { en: "long", uk: "довгий" },
   { en: "short", uk: "короткий" },
+
+//8
   { en: "good", uk: "добрий" },
   { en: "bad", uk: "поганий" },
   { en: "happy", uk: "щасливий" },
@@ -80,6 +94,8 @@ const WORDS_A1 = [
   { en: "old", uk: "старий" },
   { en: "young", uk: "молодий" },
   { en: "beautiful", uk: "красивий" },
+
+//9
   { en: "easy", uk: "легкий" },
   { en: "difficult", uk: "важкий" },
   { en: "open", uk: "відкритий" },
@@ -90,76 +106,58 @@ const WORDS_A1 = [
   { en: "no", uk: "ні" },
   { en: "please", uk: "будь ласка" },
   { en: "thank you", uk: "дякую" },
+
+//10
   { en: "hello", uk: "привіт" },
   { en: "goodbye", uk: "до побачення" },
   { en: "excuse me", uk: "вибачте" },
   { en: "sorry", uk: "даруйте" },
   { en: "bathroom", uk: "ванна кімната" },
-  { en: "kitchen", uk: "кухня" },
-  { en: "hospital", uk: "лікарня" },
-  { en: "doctor", uk: "лікар" },
   { en: "nurse", uk: "медсестра" },
   { en: "police", uk: "поліція" },
-  { en: "airport", uk: "аеропорт" },
   { en: "station", uk: "станція" },
-  { en: "hotel", uk: "готель" },
   { en: "restaurant", uk: "ресторан" },
   { en: "cafe", uk: "кафе" },
+
+
+//11
   { en: "park", uk: "парк" },
-  { en: "garden", uk: "сад" },
   { en: "sea", uk: "море" },
-  { en: "lake", uk: "озеро" },
-  { en: "mountain", uk: "гора" },
   { en: "island", uk: "острів" },
   { en: "country", uk: "країна" },
-  { en: "language", uk: "мова" },
   { en: "English", uk: "англійська" },
   { en: "Ukrainian", uk: "українська" },
   { en: "music", uk: "музика" },
   { en: "song", uk: "пісня" },
   { en: "movie", uk: "фільм" },
   { en: "game", uk: "гра" },
-  { en: "computer", uk: "комп'ютер" },
+
+
+ //12 
   { en: "phone", uk: "телефон" },
   { en: "internet", uk: "інтернет" },
-  { en: "photo", uk: "фото" },
-  { en: "letter", uk: "лист" },
   { en: "newspaper", uk: "газета" },
   { en: "story", uk: "історія" },
   { en: "question", uk: "питання" },
   { en: "answer", uk: "відповідь" },
-  { en: "name", uk: "ім'я" },
-  { en: "number", uk: "номер" },
   { en: "address", uk: "адреса" },
-  { en: "color", uk: "колір" },
-  { en: "animal", uk: "тварина" },
-  { en: "bird", uk: "птах" },
-  { en: "cow", uk: "корова" },
-  { en: "horse", uk: "кінь" },
-  { en: "sheep", uk: "вівця" },
-  { en: "pig", uk: "свиня" },
-  { en: "chicken", uk: "курка" },
-  { en: "egg", uk: "яйце" },
   { en: "butter", uk: "масло" },
-  { en: "cheese", uk: "сир" },
   { en: "sugar", uk: "цукор" },
   { en: "salt", uk: "сіль" },
-  { en: "coffee", uk: "кава" },
-  { en: "tea", uk: "чай" },
-  { en: "juice", uk: "сік" },
+
+//13
   { en: "beer", uk: "пиво" },
   { en: "wine", uk: "вино" },
-  { en: "money", uk: "гроші" },
-  { en: "shop", uk: "магазин" },
   { en: "buy", uk: "купувати" },
   { en: "sell", uk: "продавати" },
-  { en: "open", uk: "відкривати" },
   { en: "close", uk: "закривати" },
   { en: "start", uk: "починати" },
   { en: "finish", uk: "закінчувати" },
   { en: "go", uk: "йти" },
   { en: "come", uk: "приходити" },
   { en: "sit", uk: "сидіти" },
+
+//14
   { en: "stand", uk: "стояти" },
   { en: "look", uk: "дивитися" },
   { en: "see", uk: "бачити" },
@@ -168,12 +166,11 @@ const WORDS_A1 = [
   { en: "read", uk: "читати" },
   { en: "write", uk: "писати" },
   { en: "eat", uk: "їсти" },
-  { en: "drink", uk: "пити" },
   { en: "sleep", uk: "спати" },
-  { en: "work", uk: "працювати" },
   { en: "play", uk: "грати" },
+
+//15
   { en: "like", uk: "подобатися" },
-  { en: "love", uk: "любити" },
   { en: "know", uk: "знати" },
   { en: "think", uk: "думати" },
   { en: "want", uk: "хотіти" },
@@ -183,39 +180,32 @@ const WORDS_A1 = [
   { en: "call", uk: "дзвонити" },
   { en: "wait", uk: "чекати" },
   { en: "walk", uk: "ходити" },
+
+ //16 
   { en: "run", uk: "бігти" },
   { en: "drive", uk: "водити" },
   { en: "fly", uk: "літати" },
   { en: "swim", uk: "плавати" },
   { en: "cat", uk: "кіт" },
   { en: "dog", uk: "собака" },
-  { en: "bird", uk: "птах" },
-  { en: "fish", uk: "риба" },
   { en: "cow", uk: "корова" },
   { en: "sheep", uk: "вівця" },
   { en: "horse", uk: "кінь" },
   { en: "pig", uk: "свиня" },
+
+//17
   { en: "chicken", uk: "курка" },
   { en: "apple", uk: "яблуко" },
   { en: "banana", uk: "банан" },
   { en: "orange", uk: "апельсин" },
-  { en: "bread", uk: "хліб" },
-  { en: "milk", uk: "молоко" },
-  { en: "water", uk: "вода" },
   { en: "juice", uk: "сік" },
-  { en: "coffee", uk: "кава" },
   { en: "tea", uk: "чай" },
-  { en: "school", uk: "школа" },
-  { en: "teacher", uk: "вчитель" },
-  { en: "student", uk: "учень" },
-  { en: "book", uk: "книга" },
-  { en: "pen", uk: "ручка" },
-  { en: "pencil", uk: "олівець" },
   { en: "computer", uk: "комп'ютер" },
-  { en: "garden", uk: "сад" },
   { en: "star", uk: "зірка" },
   { en: "rain", uk: "дощ" },
   { en: "snow", uk: "сніг" },
+
+  //18
   { en: "wind", uk: "вітер" },
   { en: "angry", uk: "злий" },
   { en: "tired", uk: "втомлений" },
@@ -226,6 +216,8 @@ const WORDS_A1 = [
   { en: "art", uk: "мистецтво" },
   { en: "baby", uk: "немовля" },
   { en: "bag", uk: "сумка" },
+
+  //19
   { en: "ball", uk: "м'яч" },
   { en: "bank", uk: "банк" },
   { en: "beach", uk: "пляж" },
@@ -236,21 +228,21 @@ const WORDS_A1 = [
   { en: "body", uk: "тіло" },
   { en: "boot", uk: "чобіт" },
   { en: "bottle", uk: "пляшка" },
+
+  //20
   { en: "box", uk: "коробка" },
-  { en: "bread", uk: "хліб" },
   { en: "breakfast", uk: "сніданок" },
-  { en: "brother", uk: "брат" },
   { en: "cake", uk: "торт" },
   { en: "camera", uk: "камера" },
   { en: "capital", uk: "столиця" },
   { en: "carpet", uk: "килим" },
   { en: "castle", uk: "замок" },
   { en: "ceiling", uk: "стеля" },
-  { en: "chair", uk: "стілець" },
   { en: "chance", uk: "шанс" },
   { en: "change", uk: "зміна" },
+
+  //21
   { en: "cheese", uk: "сир" },
-  { en: "child", uk: "дитина" },
   { en: "city", uk: "місто" },
   { en: "class", uk: "клас" },
   { en: "clock", uk: "годинник" },
@@ -260,33 +252,32 @@ const WORDS_A1 = [
   { en: "color", uk: "колір" },
   { en: "cousin", uk: "кузен/кузина" },
   { en: "cup", uk: "чашка" },
+
+  //22
   { en: "customer", uk: "клієнт" },
-  { en: "day", uk: "день" },
   { en: "desk", uk: "письмовий стіл" },
   { en: "dinner", uk: "обід" },
   { en: "doctor", uk: "лікар" },
-  { en: "door", uk: "двері" },
   { en: "dress", uk: "сукня" },
   { en: "drink", uk: "напій" },
   { en: "driver", uk: "водій" },
   { en: "ear", uk: "вухо" },
   { en: "earth", uk: "земля" },
   { en: "egg", uk: "яйце" },
-  { en: "evening", uk: "вечір" },
+
+  //23
   { en: "eye", uk: "око" },
-  { en: "family", uk: "сім'я" },
-  { en: "father", uk: "батько" },
   { en: "finger", uk: "палець" },
   { en: "floor", uk: "підлога" },
-  { en: "food", uk: "їжа" },
   { en: "foot", uk: "нога" },
-  { en: "friend", uk: "друг" },
   { en: "garden", uk: "сад" },
   { en: "girl", uk: "дівчина" },
   { en: "glass", uk: "склянка" },
   { en: "grandfather", uk: "дідусь" },
   { en: "grandmother", uk: "бабуся" },
   { en: "hair", uk: "волосся" },
+
+  //24
   { en: "hand", uk: "рука" },
   { en: "head", uk: "голова" },
   { en: "heart", uk: "серце" },
@@ -297,6 +288,8 @@ const WORDS_A1 = [
   { en: "hour", uk: "година" },
   { en: "house", uk: "будинок" },
   { en: "key", uk: "ключ" },
+
+  //25
   { en: "king", uk: "король" },
   { en: "kitchen", uk: "кухня" },
   { en: "lady", uk: "пані" },
@@ -307,23 +300,20 @@ const WORDS_A1 = [
   { en: "light", uk: "світло" },
   { en: "line", uk: "лінія" },
   { en: "list", uk: "список" },
+
+  //26
   { en: "lock", uk: "замок" },
   { en: "love", uk: "любов" },
-  { en: "man", uk: "чоловік" },
-  { en: "market", uk: "ринок" },
   { en: "message", uk: "повідомлення" },
   { en: "minute", uk: "хвилина" },
-  { en: "money", uk: "гроші" },
-  { en: "month", uk: "місяць" },
-  { en: "morning", uk: "ранок" },
-  { en: "mother", uk: "мати" },
   { en: "mountain", uk: "гора" },
   { en: "name", uk: "ім'я" },
-  { en: "night", uk: "ніч" },
   { en: "note", uk: "нота, записка" },
   { en: "number", uk: "номер" },
   { en: "office", uk: "офіс" },
   { en: "party", uk: "вечірка" },
+
+  //27
   { en: "pen", uk: "ручка" },
   { en: "pencil", uk: "олівець" },
   { en: "person", uk: "людина" },
@@ -332,23 +322,29 @@ const WORDS_A1 = [
   { en: "place", uk: "місце" },
   { en: "plant", uk: "рослина" },
   { en: "pocket", uk: "кишеня" },
-  { en: "room", uk: "кімната" },
   { en: "season", uk: "сезон" },
   { en: "shoe", uk: "взуття" },
-  { en: "street", uk: "вулиця" },
-  { en: "student", uk: "учень" },
-  { en: "table", uk: "стіл" },
-  { en: "teacher", uk: "вчитель" },
+
+  
   { en: "telephone", uk: "телефон" },
   { en: "thing", uk: "річ" },
-  { en: "time", uk: "час" },
-  { en: "train", uk: "потяг" },
-  { en: "tree", uk: "дерево" },
   { en: "uncle", uk: "дядько" },
-  { en: "water", uk: "вода" },
-  { en: "window", uk: "вікно" },
-  { en: "woman", uk: "жінка" }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
