@@ -24,12 +24,13 @@ const resultElement = document.getElementById("result");
 const restartButton = document.getElementById("restart");
 const showWordCheckbox = document.getElementById("showWordCheckbox");
 const listenButton = document.getElementById("listenButton");
+const autoSpeakCheckbox = document.getElementById("autoSpeakCheckbox"); // нова галочка
 
 // Функція озвучення
 function speakWord(text) {
-  if ('speechSynthesis' in window) {
+  if ("speechSynthesis" in window) {
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
+    utterance.lang = "en-US";
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
   }
@@ -47,8 +48,10 @@ function showWord() {
   // Відображення слова залежно від галочки
   wordElement.textContent = wordVisible ? currentWord.en : "*******";
 
-  // Автоматична озвучка нового слова
-  speakWord(currentWord.en);
+  // Автоматична озвучка нового слова (якщо увімкнено галочку)
+  if (autoSpeakCheckbox.checked) {
+    speakWord(currentWord.en);
+  }
 
   // Створюємо 3 неправильних варіанти + правильний
   let options = [currentWord.uk];
