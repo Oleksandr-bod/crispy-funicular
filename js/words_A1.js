@@ -325,24 +325,112 @@ const WORDS_A1 = [
   { en: "season", uk: "сезон" },
   { en: "shoe", uk: "взуття" },
 
-  
+  //28
   { en: "telephone", uk: "телефон" },
   { en: "thing", uk: "річ" },
   { en: "uncle", uk: "дядько" },
+  { en: "supermarket", uk: "супермаркет" },
+  { en: "bakery", uk: "пекарня" },
+  { en: "butcher", uk: "м’ясна лавка" },
+  { en: "schoolbag", uk: "ранець" },
+  { en: "notebook", uk: "зошит" },
+  { en: "paper", uk: "папір" },
+  { en: "board", uk: "дошка" },
+
+//29
+  { en: "classroom", uk: "класна кімната" },
+  { en: "lamp", uk: "лампа" },
+  { en: "mirror", uk: "дзеркало" },
+  { en: "sofa", uk: "диван" },
+  { en: "armchair", uk: "крісло" },
+  { en: "cupboard", uk: "шафа" },
+  { en: "plate", uk: "тарілка" },
+  { en: "knife", uk: "ніж" },
+  { en: "fork", uk: "виделка" },
+  { en: "spoon", uk: "ложка" },
+
+//30
+  { en: "bowl", uk: "миска" },
+  { en: "river", uk: "річка" },
+  { en: "bridge", uk: "міст" },
+  { en: "forest", uk: "ліс" },
+  { en: "hill", uk: "пагорб" },
+  { en: "village", uk: "село" },
+  { en: "farm", uk: "ферма" },
+  { en: "field", uk: "поле" },
+  { en: "tree", uk: "дерево" },
+  { en: "leaf", uk: "листок" },
+
+//31
+  { en: "cloud", uk: "хмара" },
+  { en: "sky", uk: "небо" },
+  { en: "storm", uk: "буря" },
+  { en: "sunny", uk: "сонячний" },
+  { en: "rainy", uk: "дощовий" },
+  { en: "snowy", uk: "сніжний" },
+  { en: "warm", uk: "теплий" },
+  { en: "cool", uk: "прохолодний" },
+  { en: "weather", uk: "погода" },
+  { en: "grass", uk: "трава" },
+
+//32
+  { en: "dentist", uk: "стоматолог" },
+  { en: "teacher", uk: "вчитель" },
+  { en: "farmer", uk: "фермер" },
+  { en: "worker", uk: "робітник" },
+  { en: "engineer", uk: "інженер" },
+  { en: "cook", uk: "кухар" },
+  { en: "waiter", uk: "офіціант" },
+  { en: "actor", uk: "актор" },
+  { en: "pants", uk: "штани" },
+  { en: "shirt", uk: "сорочка" },
+
+//33
+  { en: "eggplant", uk: "баклажан" },
+  { en: "cucumber", uk: "огірок" },
+  { en: "tomato", uk: "помідор" },
+  { en: "potato", uk: "картопля" },
+  { en: "carrot", uk: "морква" },
+  { en: "onion", uk: "цибуля" },
+  { en: "garlic", uk: "часник" },
+  { en: "lemon", uk: "лимон" },
+  { en: "peach", uk: "персик" },
+  { en: "grape", uk: "виноград" },
+
+//34
+  { en: "skirt", uk: "спідниця" },
+  { en: "hat", uk: "капелюх" },
+  { en: "cap", uk: "кепка" },
+  { en: "jacket", uk: "куртка" },
+  { en: "scarf", uk: "шарф" },
+  { en: "glove", uk: "рукавичка" },
+  { en: "sock", uk: "шкарпетка" },
+  { en: "t-shirt", uk: "футболка" },
+  { en: "sweater", uk: "светр" },
+  { en: "jeans", uk: "джинси" },
+
+//35
+  { en: "shorts", uk: "шорти" },
+  { en: "belt", uk: "пояс" },
+  { en: "watch", uk: "годинник (на руці)" },
+  { en: "ring", uk: "кільце" },
+  { en: "bus stop", uk: "зупинка" },
+  { en: "ticket", uk: "квиток" },
+  { en: "train", uk: "потяг" },
+  { en: "subway", uk: "метро" },
+  { en: "taxi", uk: "таксі" },
+  { en: "bicycle", uk: "велосипед" },
+
+//36
+  { en: "motorcycle", uk: "мотоцикл" },
+  { en: "ship", uk: "корабель" },
+  { en: "nose", uk: "ніс" },
+  { en: "mouth", uk: "рот" },
+  { en: "tooth", uk: "зуб" },
+  { en: "leg", uk: "нога" },
+//37
+
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
