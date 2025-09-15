@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <body>
 <div class="game-container">
   <h1>Вгадай слово</h1>
   <div id="word">*******</div>
@@ -17,7 +16,10 @@
     Показати слово
   </label>
 
-  <!-- Кнопка для повторної озвучки -->
+  <label>
+    <input type="checkbox" id="autoSpeakCheckbox" checked>
+    Озвучувати слово автоматично
+  </label>
 
   <div id="options"></div>
   <div id="score"></div>
@@ -27,10 +29,7 @@
   <button id="restart">Грати знову</button>
 </div>
 
-
-
   <script src="./js/words_A1.js"></script>
   <script src="./js/script.js"></script>
-</body>
 </body>
 </html>
