@@ -428,8 +428,131 @@ const WORDS_A1 = [
   { en: "mouth", uk: "рот" },
   { en: "tooth", uk: "зуб" },
   { en: "leg", uk: "нога" },
-//37
+  { en: "worker’s hat", uk: "каска" },
+  { en: "writer", uk: "письменник" },
+  { en: "zoo", uk: "зоопарк" },
+  { en: "zero", uk: "нуль" }
 
+//37
+  { en: "apple pie", uk: "яблучний пиріг" },
+  { en: "airport bus", uk: "аеропортний автобус" },
+  { en: "backpack", uk: "рюкзак" },
+  { en: "catfish", uk: "сом" },
+  { en: "circle", uk: "коло" },
+  { en: "clock tower", uk: "вежа з годинником" },
+  { en: "cloudy", uk: "хмарний" },
+  { en: "corner", uk: "куток" },
+  { en: "cupboard door", uk: "дверцята шафи" },
+
+//39
+  { en: "dark", uk: "темний" },
+  { en: "dessert", uk: "десерт" },
+  { en: "dictionary", uk: "словник" },
+  { en: "drum", uk: "барабан" },
+  { en: "envelope", uk: "конверт" },
+  { en: "farmhouse", uk: "фермерський будинок" },
+  { en: "feather", uk: "пір’я" },
+  { en: "fire", uk: "вогонь" },
+  { en: "floor lamp", uk: "торшер" },
+  { en: "fridge", uk: "холодильник" },
+
+//40
+  { en: "game console", uk: "ігрова приставка" },
+  { en: "gift", uk: "подарунок" },
+  { en: "glasses", uk: "окуляри" },
+  { en: "glue", uk: "клей" },
+  { en: "goat", uk: "коза" },
+  { en: "gold", uk: "золото" },
+  { en: "guest", uk: "гість" },
+  { en: "handbag", uk: "сумочка" },
+  { en: "helmet", uk: "шолом" },
+  { en: "holiday card", uk: "листівка" },
+
+//41
+  { en: "ice", uk: "лід" },
+  { en: "ice cream", uk: "морозиво" },
+  { en: "jungle", uk: "джунглі" },
+  { en: "kettle", uk: "чайник" },
+  { en: "keychain", uk: "брелок" },
+  { en: "ladder", uk: "драбина" },
+  { en: "lamp post", uk: "ліхтар" },
+  { en: "lunch", uk: "ланч" },
+  { en: "magazine", uk: "журнал" },
+  { en: "mail", uk: "пошта" },
+
+//42
+  { en: "marketplace", uk: "торговий майданчик" },
+  { en: "mirror glass", uk: "дзеркальне скло" },
+  { en: "monkey", uk: "мавпа" },
+  { en: "morning coffee", uk: "ранкова кава" },
+  { en: "mountain road", uk: "гірська дорога" },
+  { en: "museum", uk: "музей" },
+  { en: "neighbour", uk: "сусід" },
+  { en: "office chair", uk: "офісне крісло" },
+  { en: "paint", uk: "фарба" },
+  { en: "painter", uk: "маляр" },
+
+//43
+  { en: "passport", uk: "паспорт" },
+  { en: "pencil case", uk: "пенал" },
+  { en: "perfume", uk: "парфуми" },
+  { en: "photo frame", uk: "фоторамка" },
+  { en: "pillow", uk: "подушка" },
+  { en: "plane ticket", uk: "авіаквиток" },
+  { en: "plant pot", uk: "горщик для рослин" },
+  { en: "post office", uk: "пошта" },
+  { en: "present", uk: "подарунок" },
+  { en: "printer", uk: "принтер" },
+
+//44
+  { en: "radio", uk: "радіо" },
+  { en: "raincoat", uk: "плащ" },
+  { en: "recipe", uk: "рецепт" },
+  { en: "remote control", uk: "пульт" },
+  { en: "river bank", uk: "берег річки" },
+  { en: "roommate", uk: "сусід по кімнаті" },
+  { en: "rose", uk: "троянда" },
+  { en: "sand", uk: "пісок" },
+  { en: "sandwich", uk: "бутерброд" },
+  { en: "school bell", uk: "шкільний дзвінок" },
+
+//45
+  { en: "season ticket", uk: "проїзний квиток" },
+  { en: "shampoo", uk: "шампунь" },
+  { en: "shelf", uk: "полиця" },
+  { en: "shoes", uk: "черевики" },
+  { en: "shop assistant", uk: "продавець" },
+  { en: "sidewalk", uk: "тротуар" },
+  { en: "silver", uk: "срібло" },
+  { en: "socks", uk: "шкарпетки" },
+  { en: "suitcase", uk: "валіза" },
+  { en: "supervisor", uk: "керівник" },
+
+//46
+  { en: "tablet", uk: "планшет" },
+  { en: "teacher’s desk", uk: "стіл вчителя" },
+  { en: "tennis", uk: "теніс" },
+  { en: "ticket office", uk: "каса" },
+  { en: "tiger", uk: "тигр" },
+  { en: "toilet", uk: "туалет" },
+  { en: "toothbrush", uk: "зубна щітка" },
+  { en: "toothpaste", uk: "зубна паста" },
+  { en: "tourist", uk: "турист" },
+  { en: "toy", uk: "іграшка" },
+
+//47
+  { en: "traffic light", uk: "світлофор" },
+  { en: "tram", uk: "трамвай" },
+  { en: "umbrella", uk: "парасолька" },
+  { en: "uniform", uk: "уніформа" },
+  { en: "village road", uk: "сільська дорога" },
+  { en: "violin", uk: "скрипка" },
+  { en: "wallet", uk: "гаманець" },
+  { en: "watermelon", uk: "кавун" },
+  { en: "weekend", uk: "вихідні" },
+  { en: "window glass", uk: "віконне скло" },
+
+//48
 ];
 
 
