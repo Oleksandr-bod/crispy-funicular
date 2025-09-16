@@ -551,22 +551,4 @@ const WORDS_A1 = [
   { en: "watermelon", uk: "кавун" },
   { en: "weekend", uk: "вихідні" },
   { en: "window glass", uk: "віконне скло" },
-
-//48
-
-
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
