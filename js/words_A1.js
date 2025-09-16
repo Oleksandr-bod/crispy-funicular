@@ -431,7 +431,7 @@ const WORDS_A1 = [
   { en: "worker’s hat", uk: "каска" },
   { en: "writer", uk: "письменник" },
   { en: "zoo", uk: "зоопарк" },
-  { en: "zero", uk: "нуль" }
+  { en: "zero", uk: "нуль" },
 
 //37
   { en: "apple pie", uk: "яблучний пиріг" },
