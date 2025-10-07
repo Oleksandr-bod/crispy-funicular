@@ -1,5 +1,3 @@
-// js/script.js
-
 // Функція перемішування масиву (Фішера–Єйтса)
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -10,11 +8,15 @@ function shuffleArray(array) {
 }
 
 // Ініціалізація
-let words = shuffleArray([...WORDS_A1]);
+let allWords = shuffleArray([...WORDS_A1]);
+let currentSet = [];
+let currentSetSize = 10;
 let currentWordIndex = 0;
 let correctAnswers = 0;
 let wrongAnswers = 0;
-let wordVisible = false; // спочатку слово приховане
+let wordVisible = false;
+let roundCorrect = 0;
+let roundWrong = 0;
 
 // DOM елементи
 const wordElement = document.getElementById("word");
@@ -24,9 +26,9 @@ const resultElement = document.getElementById("result");
 const restartButton = document.getElementById("restart");
 const showWordCheckbox = document.getElementById("showWordCheckbox");
 const listenButton = document.getElementById("listenButton");
-const autoSpeakCheckbox = document.getElementById("autoSpeakCheckbox"); // нова галочка
+const autoSpeakCheckbox = document.getElementById("autoSpeakCheckbox");
 
-// Функція озвучення
+// Озвучення
 function speakWord(text) {
   if ("speechSynthesis" in window) {
     const utterance = new SpeechSynthesisUtterance(text);
@@ -36,37 +38,44 @@ function speakWord(text) {
   }
 }
 
-// Показуємо слово та варіанти відповідей
+// Почати новий раунд
+function startRound() {
+  currentSet = allWords.slice(0, currentSetSize);
+  currentSet = shuffleArray(currentSet);
+  currentWordIndex = 0;
+  roundCorrect = 0;
+  roundWrong = 0;
+  showWord();
+}
+
+// Показати слово
 function showWord() {
-  if (currentWordIndex >= words.length) {
-    endGame();
+  if (currentWordIndex >= currentSet.length) {
+    endRound();
     return;
   }
 
-  const currentWord = words[currentWordIndex];
-
-  // Відображення слова залежно від галочки
+  const currentWord = currentSet[currentWordIndex];
   wordElement.textContent = wordVisible ? currentWord.en : "*******";
 
-  // Автоматична озвучка нового слова (якщо увімкнено галочку)
   if (autoSpeakCheckbox.checked) {
     speakWord(currentWord.en);
   }
 
-  // Створюємо 3 неправильних варіанти + правильний
+  // Варіанти
   let options = [currentWord.uk];
-  let usedIndexes = new Set([currentWordIndex]);
+  let usedIndexes = new Set([allWords.indexOf(currentWord)]);
   while (options.length < 4) {
-    const idx = Math.floor(Math.random() * words.length);
+    const idx = Math.floor(Math.random() * allWords.length);
     if (!usedIndexes.has(idx)) {
-      options.push(words[idx].uk);
+      options.push(allWords[idx].uk);
       usedIndexes.add(idx);
     }
   }
 
   options = shuffleArray(options);
 
-  // Відображення кнопок з варіантами
+  // Відображення варіантів
   optionsElement.innerHTML = "";
   options.forEach(option => {
     const button = document.createElement("button");
@@ -84,54 +93,65 @@ function checkAnswer(selected, correct, button) {
   if (selected === correct) {
     button.classList.add("correct");
     correctAnswers++;
+    roundCorrect++;
   } else {
     button.classList.add("wrong");
     wrongAnswers++;
-    // Показати правильний варіант
+    roundWrong++;
     optionButtons.forEach(btn => {
       if (btn.textContent === correct) btn.classList.add("correct");
     });
   }
 
   scoreElement.textContent = `Правильних: ${correctAnswers} | Неправильних: ${wrongAnswers}`;
-
   currentWordIndex++;
   setTimeout(showWord, 1000);
 }
 
-// Кінець гри
+// Кінець раунду
+function endRound() {
+  if (roundWrong === 0) {
+    currentSetSize++; // якщо всі правильні → додаємо 1 слово
+    resultElement.textContent = `✅ Усі правильні! Додаємо +1 слово (${currentSetSize})`;
+  } else {
+    resultElement.textContent = `🔁 Є помилки (${roundWrong}). Повторюємо ті ж ${currentSetSize} слів.`;
+  }
+
+  setTimeout(startRound, 2000);
+}
+
+// Кінець гри (якщо закінчили всі слова)
 function endGame() {
   wordElement.textContent = "Гру завершено!";
   optionsElement.innerHTML = "";
   resultElement.textContent = `Ваш результат: ${correctAnswers} правильних, ${wrongAnswers} неправильних.`;
 }
 
-// Галочка "Показати слово" керує тільки видимістю тексту
+// Галочка “Показати слово”
 showWordCheckbox.addEventListener("change", () => {
   wordVisible = showWordCheckbox.checked;
-  const currentWord = words[currentWordIndex];
+  const currentWord = currentSet[currentWordIndex];
   if (currentWord) {
     wordElement.textContent = wordVisible ? currentWord.en : "*******";
   }
 });
 
-// Кнопка "Слухати" завжди озвучує слово
+// Кнопка “Слухати”
 listenButton.addEventListener("click", () => {
-  const currentWord = words[currentWordIndex];
+  const currentWord = currentSet[currentWordIndex];
   if (currentWord) speakWord(currentWord.en);
 });
 
-// Кнопка "Грати знову"
+// Кнопка “Грати знову”
 restartButton.addEventListener("click", () => {
-  currentWordIndex = 0;
+  allWords = shuffleArray([...WORDS_A1]);
+  currentSetSize = 10;
   correctAnswers = 0;
   wrongAnswers = 0;
-  scoreElement.textContent = "";
   resultElement.textContent = "";
-  words = shuffleArray([...WORDS_A1]);
-  wordVisible = showWordCheckbox.checked;
-  showWord();
+  scoreElement.textContent = "";
+  startRound();
 });
 
-// Старт гри
-showWord();
+// Старт
+startRound();
