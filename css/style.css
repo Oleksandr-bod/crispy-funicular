@@ -149,7 +149,7 @@ h1 {
   .game-container {
     transform: scale(0.9);
     transform-origin: center center;
-    padding: 25px;
+    padding: 5px;
     width: 95%;
     max-width: none;
     max-height: none;
