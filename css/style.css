@@ -30,7 +30,6 @@ body {
 
 /* --- Заголовок --- */
 h1 {
-  margin: 0; 
   font-size: 28px;
   color: #00e5ff;
   text-shadow: 0 0 15px #00e5ff;
@@ -49,7 +48,7 @@ h1 {
 #options {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 25px;
   margin-top: 10px;
   width: 100%;
 }
@@ -141,7 +140,7 @@ h1 {
 /* --- Горизонтальна орієнтація (landscape) --- */
 @media screen and (orientation: landscape) and (max-height: 500px) {
   body {
-    height: 80vh;
+    height: 90vh;
     padding: 8px;
     overflow: hidden;
     background: radial-gradient(circle at center, #050512, #000010);
@@ -150,7 +149,7 @@ h1 {
   .game-container {
     transform: scale(0.9);
     transform-origin: center center;
-    padding: 5px;
+    padding: 25px;
     width: 95%;
     max-width: none;
     max-height: none;
@@ -160,7 +159,7 @@ h1 {
   /* 2 кнопки в ряд */
   #options {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 25px;
   }
 
   .option-btn {
