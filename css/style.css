@@ -186,30 +186,3 @@ input[type="checkbox"] {
   }
 }
 
-/* Адаптивність для мобільних */
-@media (max-width: 600px) {
-  .game-container {
-    padding: 15px;
-    gap: 10px;
-    max-width: 100%;       /* контейнер не виходить за межі екрану */
-  }
-
-  #word {
-    font-size: 24px;
-    word-break: break-word; /* розрив тексту по словах */
-  }
-
-  /* Кнопки */
-  .option-btn, #listenButton, #restart {
-    font-size: 14px;
-    padding: 10px 12px;   /* зменшено паддінг для мобільного */
-    width: 100%;           /* кнопки займають всю ширину контейнера */
-    box-sizing: border-box; /* враховує padding у ширину */
-    white-space: normal;   /* дозволяє тексту переноситись */
-  }
-
-  .option-btn {
-    margin: 6px 0;         /* відстань між кнопками */
-  }
-}
-
