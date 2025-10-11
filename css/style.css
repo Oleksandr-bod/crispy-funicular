@@ -164,25 +164,3 @@ input[type="checkbox"] {
   box-shadow: 0 0 40px rgba(255, 200, 0, 1);
 }
 
-/* Адаптивність для мобільних */
-@media (max-width: 600px) {
-  .game-container {
-    padding: 20px;
-    gap: 12px;
-  }
-
-  #word {
-    font-size: 28px;
-  }
-
-  .option-btn {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  #listenButton, #restart {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-}
-
