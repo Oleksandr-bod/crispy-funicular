@@ -1,162 +1,91 @@
-/* === Загальні стилі сторінки === */
+/* === БАЗОВІ СТИЛІ === */
 body {
   font-family: 'Catamaran', sans-serif;
-  background: radial-gradient(circle at top, #0a0120, #000);
+  background: radial-gradient(circle at top, #0b0121, #050012);
   color: #fff;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
-  padding: 10px;
-  overflow: hidden;
 }
 
-/* === Контейнер гри === */
 .game-container {
-  background: rgba(25, 10, 50, 0.85);
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(90, 0, 255, 0.5);
-  padding: 30px 25px;
   text-align: center;
-  width: 100%;
-  max-width: 480px;
-  animation: fadeIn 1s ease;
+  background: rgba(20, 10, 40, 0.8);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(123, 31, 255, 0.5);
+  max-width: 380px;
+  width: 90%;
 }
 
-/* Анімація появи */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+h1 {
+  font-size: 26px;
+  color: #8c66ff;
+  text-shadow: 0 0 12px #8c66ff, 0 0 25px #00e5ff;
+  margin-bottom: 20px;
 }
 
-/* === Заголовок === */
-.game-container h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+#word {
+  font-size: 24px;
+  font-weight: bold;
   color: #00e5ff;
+  margin-bottom: 25px;
   text-shadow: 0 0 15px #00e5ff;
 }
 
-/* === Слово для вгадування === */
-#word {
-  font-size: 38px;
-  font-weight: bold;
-  margin: 25px 0;
-  color: #fff;
-  text-shadow: 0 0 20px #a020f0;
-  animation: glow 2s infinite ease-in-out;
-}
-
-@keyframes glow {
-  0%, 100% {
-    text-shadow: 0 0 15px #a020f0, 0 0 25px #00e5ff;
-  }
-  50% {
-    text-shadow: 0 0 30px #00e5ff, 0 0 45px #a020f0;
-  }
-}
-
-/* === Кнопка "Слухати" === */
-#listenButton {
-  background: linear-gradient(90deg, #00bcd4, #3f51b5);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 12px 24px;
-  font-weight: bold;
-  cursor: pointer;
-  text-shadow: 0 0 8px #00e5ff;
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
-  transition: all 0.25s ease;
-  animation: button-pulse 4s infinite ease-in-out;
-}
-
-#listenButton:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 229, 255, 0.9);
-}
-
-/* === Варіанти відповідей === */
+/* === КНОПКИ === */
 .options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* вертикально для телефонів */
+  align-items: stretch;
+  gap: 12px; /* відстань між кнопками */
 }
 
 .option-btn {
-  background: linear-gradient(90deg, #673ab7, #2196f3);
+  background: linear-gradient(90deg, #3f51b5, #9c27b0);
   color: white;
   border: none;
   border-radius: 12px;
-  padding: 14px 18px;
-  font-weight: bold;
+  padding: 14px;
   font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
-  text-shadow: 0 0 6px #00e5ff;
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: all 0.25s ease;
-  animation: button-pulse 4s infinite ease-in-out;
+  box-shadow: 0 0 15px rgba(156, 39, 176, 0.6);
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
+/* Ефект при наведенні */
 .option-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 229, 255, 0.8);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 1);
+  background: linear-gradient(90deg, #00bcd4, #3f51b5);
 }
 
-/* Пульсуюче сяйво */
-@keyframes button-pulse {
-  0%, 100% {
-    box-shadow: 0 0 10px #00e5ff, 0 0 20px #7b1fa2;
+/* === АНІМАЦІЇ === */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px #3f51b5, 0 0 30px #9c27b0;
   }
-  50% {
-    box-shadow: 0 0 25px #00e5ff, 0 0 40px #7b1fa2;
+  100% {
+    box-shadow: 0 0 25px #00e5ff, 0 0 50px #8c66ff;
   }
 }
 
-/* === Кнопка "Грати знову" === */
-#restart {
-  background: linear-gradient(90deg, #ff9800, #ff5722);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 12px 24px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 20px;
-  box-shadow: 0 0 20px rgba(255, 152, 0, 0.5);
-  transition: 0.3s;
-}
-
-#restart:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px rgba(255, 152, 0, 0.8);
-}
-
-/* === Результати та рахунок === */
-#score, #result {
-  font-size: 18px;
-  margin-top: 10px;
-  color: #ccc;
-  text-shadow: 0 0 6px #00e5ff;
-}
-
-/* === Адаптивність === */
-@media (max-width: 600px) {
-  .game-container {
-    padding: 20px 15px;
+/* === АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ === */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
   }
 
-  .options {
-    grid-template-columns: 1fr; /* Одна кнопка на ряд */
-    gap: 12px;
+  #word {
+    font-size: 20px;
   }
 
   .option-btn {
@@ -164,37 +93,7 @@ body {
     padding: 12px;
   }
 
-  #word {
-    font-size: 28px;
-  }
-
-  #listenButton, #restart {
-    font-size: 16px;
-    padding: 10px 18px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-}
-
-/* === Горизонтальний режим телефону === */
-@media (max-height: 500px) and (orientation: landscape) {
-  body {
-    align-items: flex-start;
-    overflow-y: auto;
-  }
-
   .game-container {
-    margin-top: 20px;
-    padding: 15px;
-  }
-
-  #word {
-    font-size: 26px;
-  }
-
-  .options {
-    grid-template-columns: 1fr;
+    padding: 20px;
   }
 }
