@@ -81,10 +81,10 @@ input[type="checkbox"] {
 }
 
 /* Анімація кнопок */
-/* @keyframes button-pulse {
+@keyframes button-pulse {
   0%, 100% { box-shadow: 0 0 15px rgba(98, 0, 234, 0.8); }
   50% { box-shadow: 0 0 30px rgba(0, 229, 255, 1); }
-} */
+}
 
 /* Кнопка "Слухати" */
 #listenButton {
@@ -164,3 +164,24 @@ input[type="checkbox"] {
   box-shadow: 0 0 40px rgba(255, 200, 0, 1);
 }
 
+/* Адаптивність для мобільних */
+@media (max-width: 600px) {
+  .game-container {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  #word {
+    font-size: 28px;
+  }
+
+  .option-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #listenButton, #restart {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
