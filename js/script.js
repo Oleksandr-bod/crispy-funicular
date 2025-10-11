@@ -7,7 +7,7 @@ function shuffleArray(array) {
   return array;
 }
 
-// Ініціалізація
+// Ініціалізація змінних
 let allWords = shuffleArray([...WORDS_A1]);
 let currentSet = [];
 let currentSetSize = 10;
@@ -36,6 +36,46 @@ function speakWord(text) {
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
   }
+}
+
+// ✅ Збереження прогресу
+function saveProgress() {
+  const progress = {
+    allWords,
+    currentSet,
+    currentSetSize,
+    currentWordIndex,
+    correctAnswers,
+    wrongAnswers,
+    roundCorrect,
+    roundWrong,
+    wordVisible
+  };
+  localStorage.setItem("gameProgress", JSON.stringify(progress));
+}
+
+// ✅ Завантаження прогресу
+function loadProgress() {
+  const saved = localStorage.getItem("gameProgress");
+  if (saved) {
+    const progress = JSON.parse(saved);
+    allWords = progress.allWords;
+    currentSet = progress.currentSet;
+    currentSetSize = progress.currentSetSize;
+    currentWordIndex = progress.currentWordIndex;
+    correctAnswers = progress.correctAnswers;
+    wrongAnswers = progress.wrongAnswers;
+    roundCorrect = progress.roundCorrect;
+    roundWrong = progress.roundWrong;
+    wordVisible = progress.wordVisible;
+
+    scoreElement.textContent = `Правильних: ${correctAnswers} | Неправильних: ${wrongAnswers}`;
+    showWordCheckbox.checked = wordVisible;
+
+    showWord();
+    return true;
+  }
+  return false;
 }
 
 // Почати новий раунд
@@ -84,6 +124,8 @@ function showWord() {
     button.addEventListener("click", () => checkAnswer(option, currentWord.uk, button));
     optionsElement.appendChild(button);
   });
+
+  saveProgress(); // ✅ зберігаємо після показу слова
 }
 
 // Перевірка відповіді
@@ -105,6 +147,9 @@ function checkAnswer(selected, correct, button) {
 
   scoreElement.textContent = `Правильних: ${correctAnswers} | Неправильних: ${wrongAnswers}`;
   currentWordIndex++;
+
+  saveProgress(); // ✅ зберігаємо після відповіді
+
   setTimeout(showWord, 1000);
 }
 
@@ -117,6 +162,8 @@ function endRound() {
     resultElement.textContent = `🔁 Є помилки (${roundWrong}). Повторюємо ті ж ${currentSetSize} слів.`;
   }
 
+  saveProgress(); // ✅ зберігаємо після раунду
+
   setTimeout(startRound, 2000);
 }
 
@@ -125,6 +172,7 @@ function endGame() {
   wordElement.textContent = "Гру завершено!";
   optionsElement.innerHTML = "";
   resultElement.textContent = `Ваш результат: ${correctAnswers} правильних, ${wrongAnswers} неправильних.`;
+  localStorage.removeItem("gameProgress"); // очищаємо прогрес
 }
 
 // Галочка “Показати слово”
@@ -134,6 +182,7 @@ showWordCheckbox.addEventListener("change", () => {
   if (currentWord) {
     wordElement.textContent = wordVisible ? currentWord.en : "*******";
   }
+  saveProgress();
 });
 
 // Кнопка “Слухати”
@@ -144,6 +193,7 @@ listenButton.addEventListener("click", () => {
 
 // Кнопка “Грати знову”
 restartButton.addEventListener("click", () => {
+  localStorage.removeItem("gameProgress"); // очищаємо прогрес
   allWords = shuffleArray([...WORDS_A1]);
   currentSetSize = 10;
   correctAnswers = 0;
@@ -157,5 +207,7 @@ restartButton.addEventListener("click", () => {
 showWordCheckbox.checked = true;
 wordVisible = true;
 
-// Старт
-startRound();
+// Старт гри або завантаження прогресу
+if (!loadProgress()) {
+  startRound();
+}
