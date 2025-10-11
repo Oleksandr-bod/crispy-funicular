@@ -14,7 +14,7 @@ let currentSetSize = 10;
 let currentWordIndex = 0;
 let correctAnswers = 0;
 let wrongAnswers = 0;
-let wordVisible = false;
+let wordVisible = true; // ✅ спочатку показуємо слово
 let roundCorrect = 0;
 let roundWrong = 0;
 
@@ -152,6 +152,10 @@ restartButton.addEventListener("click", () => {
   scoreElement.textContent = "";
   startRound();
 });
+
+// ✅ При завантаженні галочка вже стоїть
+showWordCheckbox.checked = true;
+wordVisible = true;
 
 // Старт
 startRound();
