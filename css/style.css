@@ -180,32 +180,24 @@ input[type="checkbox"] {
   }
 }
 
-/* 🔄 Фікс для горизонтальної орієнтації екрана */
+/* 🌀 Масштабування гри при горизонтальному положенні телефону */
 @media screen and (orientation: landscape) and (max-height: 500px) {
   body {
-    align-items: flex-start; /* вирівнює контейнер вгору, щоб не обрізався */
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
 
   .game-container {
-    max-height: none;       /* прибираємо обмеження висоти */
-    height: auto;           /* дозволяє повністю показати весь контент */
-    overflow-y: visible;    /* знімає прокрутку всередині */
-    margin-top: 20px;
-  }
-
-  #word {
-    font-size: 26px;
-  }
-
-  .option-btn {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  #listenButton, #restart {
-    padding: 10px 18px;
-    font-size: 15px;
+    transform: scale(0.8);      /* зменшення розміру */
+    transform-origin: center center;
+    max-height: none;
   }
 }
 
+/* Для ще менших екранів (наприклад, 360px висоти) */
+@media screen and (orientation: landscape) and (max-height: 400px) {
+  .game-container {
+    transform: scale(0.7);
+  }
+}
