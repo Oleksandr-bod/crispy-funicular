@@ -80,12 +80,6 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* Анімація кнопок */
-/* @keyframes button-pulse {
-  0%, 100% { box-shadow: 0 0 15px rgba(98, 0, 234, 0.8); }
-  50% { box-shadow: 0 0 30px rgba(0, 229, 255, 1); }
-} */
-
 /* Кнопка "Слухати" */
 #listenButton {
   background: linear-gradient(90deg, #6200ea, #00e5ff);
