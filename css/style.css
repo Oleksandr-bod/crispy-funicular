@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   margin: 0;
   overflow: hidden;
 }
@@ -141,6 +141,7 @@ h1 {
 /* --- Горизонтальна орієнтація (landscape) --- */
 @media screen and (orientation: landscape) and (max-height: 500px) {
   body {
+    height: 80vh;
     padding: 8px;
     overflow: hidden;
     background: radial-gradient(circle at center, #050512, #000010);
