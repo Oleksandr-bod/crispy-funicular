@@ -13,12 +13,12 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 /* --- Контейнер гри --- */
 .game-container {
-  background: rgba(20, 20, 40, 0.85);
+  background: rgba(119, 119, 154, 0.85);
   box-shadow: 0 0 40px rgba(0, 180, 255, 0.6);
   border-radius: 25px;
   padding: 40px;
@@ -63,6 +63,7 @@ h1 {
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
+  /* animation: button-pulse 4s infinite ease-in-out; */
   transition: all 0.25s ease;
   text-align: center;
 }
@@ -141,7 +142,7 @@ h1 {
   body {
     height: 90vh;
     padding: 8px;
-    overflow: hidden;
+    overflow: scroll;
     background: radial-gradient(circle at center, #050512, #000010);
   }
 
